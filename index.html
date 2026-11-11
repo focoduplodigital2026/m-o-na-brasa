@@ -1,262 +1,82 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mão na Brasa Burger | Hamburgueria premium e pedidos online</title>
-    <meta name="description" content="Mão na Brasa Burger: hamburgueria artesanal premium com cardapio digital, personalizacao, pedidos online, entrega, retirada e acompanhamento em tempo real.">
-    <meta property="og:title" content="Mão na Brasa Burger">
-    <meta property="og:description" content="O hamburguer que voce estava esperando. Peca online em uma experiencia premium.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/hero-mao-na-brasa.jpg">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0907'/%3E%3Cpath d='M14 30c2-10 34-10 36 0H14Zm2 6h32v5c0 4-3 7-7 7H23c-4 0-7-3-7-7v-5Z' fill='%23d6a245'/%3E%3Cpath d='M15 33h34' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles.css">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Restaurant",
-        "name": "Mão na Brasa Burger",
-        "servesCuisine": "Hamburgueria artesanal",
-        "priceRange": "$$",
-        "telephone": "+55 64 99236-0895",
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "1827"}
-      }
-    </script>
-  </head>
-  <body>
-    <header class="topbar" id="topbar">
-      <a class="brand" href="#inicio" aria-label="Mão na Brasa Burger inicio">
-        <img class="brand-logo" src="assets/mao-na-brasa-logo.png" alt="Logo Mão na Brasa Burger">
-        <span><strong data-site="brandShort">Mão na Brasa</strong><small data-site="brandTag">Burger</small></span>
-      </a>
-      <nav class="desktop-nav" aria-label="Principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#cardapio">Cardapio</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#avaliacoes">Avaliacoes</a>
-        <a href="#contato">Contato</a>
-        <a href="#admin">Entrar admin</a>
-      </nav>
-      <div class="header-actions">
-        <button class="btn ghost small" data-scroll="#cardapio">Pedir agora</button>
-        <button class="icon-btn" id="cartButton" aria-label="Abrir carrinho"><span>Cart</span><b id="cartCount">0</b></button>
-        <button class="icon-btn mobile-only" id="menuButton" aria-label="Abrir menu">Menu</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="Minha Central: sua rotina, compromissos e lembretes em um só lugar." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Minha Central | Seu dia, sob controle</title>
+</head>
+<body>
+  <section class="welcome" id="welcome" aria-label="Boas-vindas à Minha Central">
+    <header class="welcome-header"><div class="welcome-logo"><span class="welcome-logo-icon">✳</span><strong>minha<span>central</span></strong></div><span class="welcome-chip">SUA ROTINA, NO SEU CONTROLE</span></header>
+    <div class="welcome-body">
+      <div class="welcome-copy"><span class="welcome-kicker">SEU ESPAÇO. SUAS PRIORIDADES.</span><h1>Menos coisas na cabeça.<br><em>Mais vida em ordem.</em></h1><p>Organize compromissos, tarefas e lembretes em um só lugar. Sua rotina fica disponível no celular e no computador.</p>
+      <div class="welcome-benefits"><div><span>✓</span> Tarefas organizadas por área da vida</div><div><span>✓</span> Prazos, prioridades e visão do dia</div><div><span>✓</span> Dados associados à sua conta na nuvem</div></div>
+      <div class="welcome-actions"><button type="button" class="primary-btn welcome-primary" id="welcomeSignup">Criar minha conta grátis <span>→</span></button><button type="button" class="welcome-login" id="welcomeLogin">Já tenho uma conta · Entrar</button></div>
+      <aside class="install-info" aria-label="Instalar Minha Central"><div class="install-info-icon">↧</div><div><strong>Minha Central no seu celular</strong><p>Adicione o app à tela inicial para abrir com um toque, sem procurar o site no navegador. A instalação é gratuita.</p><button type="button" class="install-action" data-install>Instalar aplicativo <span aria-hidden="true">↗</span></button></div></aside>
+      <small class="welcome-note">Cadastro e acesso seguros com Google. Para novos usuários, a conta é criada no primeiro login autorizado.</small><p class="welcome-status" id="welcomeStatus" role="status" aria-live="polite">Verificando sua sessão…</p>
       </div>
-    </header>
-
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-      <a href="#inicio">Inicio</a>
-      <a href="#cardapio">Cardapio</a>
-      <a href="#promocoes">Promocoes</a>
-      <a href="#admin">Entrar admin</a>
-      <a href="#contato">Contato</a>
-    </nav>
-
-    <main>
-      <section class="hero" id="inicio">
-        <img src="assets/hero-mao-na-brasa.jpg" alt="Hamburguer artesanal Mão na Brasa com cheddar e bacon" class="hero-img">
-        <div class="hero-overlay"></div>
-        <div class="hero-content reveal">
-          <p class="eyebrow" data-site="heroEyebrow">Hamburgueria artesanal premium</p>
-          <h1 data-site="heroTitle">O hamburguer que voce estava esperando.</h1>
-          <p class="lead" data-site="heroText">Ingredientes selecionados, combinacoes irresistiveis e sabor de verdade em uma experiencia digital de alto nivel.</p>
-          <div class="hero-actions">
-            <button class="btn primary" data-scroll="#cardapio">Pedir agora</button>
-            <button class="btn outline" data-scroll="#cardapio">Ver cardapio</button>
-          </div>
-          <div class="micro-info">
-            <span>Fogo artesanal</span>
-            <span data-site="deliveryInfo">Entrega 35-50 min</span>
-            <span data-site="ratingInfo">4.9 dos clientes</span>
-          </div>
-        </div>
-        <aside class="store-card reveal">
-          <div><small>Status</small><strong id="storeStatus">Aberto ate 23:30</strong></div>
-          <div><small>Ticket medio</small><strong data-site="avgTicket">R$ 54,80</strong></div>
-          <div><small>Pedidos hoje</small><strong data-site="todayOrders">128</strong></div>
-        </aside>
-      </section>
-
-      <section class="section band" id="promocoes">
-        <div class="section-head">
-          <p class="eyebrow">Promocoes</p>
-          <h2>Ofertas que dao fome</h2>
-          <p>Combos, lancamentos e cupons com prazo para acelerar a decisao.</p>
-        </div>
-        <div class="promo-grid">
-          <article class="promo-card large promo-barca">
-            <span class="badge" data-site="promoBadge">Combo da noite</span>
-            <h3 data-site="promoTitle">Barca Mão na Brasa</h3>
-            <p data-site="promoText">2 hamburgueres, batata frita com bacon, rodela de cebola e 2 refrigerantes lata.</p>
-            <strong data-site="promoPrice">R$ 89,90</strong>
-            <small>Oferta termina em <b id="countdown">02:35:21</b></small>
-          </article>
-          <article class="promo-card"><span class="badge">Cupom</span><h3>BRASA10</h3><p>10% off acima de R$ 70.</p></article>
-          <article class="promo-card"><span class="badge">Lancamento</span><h3>Truffle Melt</h3><p>Blend da casa, cheddar curado e molho trufado.</p></article>
-        </div>
-      </section>
-
-      <section class="section" id="cardapio">
-        <div class="section-head">
-          <p class="eyebrow">Cardapio digital</p>
-          <h2>Escolha, personalize e peca em poucos toques</h2>
-          <p>Produtos com adicionais, observacoes, carrinho lateral e checkout em etapas.</p>
-        </div>
-        <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Categorias do cardapio"></div>
-        <div class="product-grid" id="productGrid"></div>
-      </section>
-
-      <section class="feature" id="favorito">
-        <div class="feature-copy reveal">
-          <p class="eyebrow">O favorito da casa</p>
-          <h2 data-site="featureTitle">Mão na Brasa Signature</h2>
-          <p data-site="featureText">Blend 180g prensado na chapa, cheddar maturado, bacon crocante, cebola caramelizada, picles da casa e molho da brasa.</p>
-          <ul class="ingredient-list">
-            <li>Double smash artesanal</li>
-            <li>Brioche selado na manteiga</li>
-            <li>Molho especial levemente defumado</li>
-          </ul>
-          <div class="price-line"><span>R$ 39,90</span><button class="btn primary" data-feature-add>Quero esse</button></div>
-        </div>
-        <img class="feature-img reveal" src="assets/burger-double-cheddar-bacon.jpg" alt="Hamburguer destaque Mão na Brasa Signature com cheddar e bacon">
-      </section>
-
-      <section class="section split" id="sobre">
-        <div>
-          <p class="eyebrow" data-site="aboutEyebrow">Sobre a Mão na Brasa</p>
-          <h2 data-site="aboutTitle">Cozinha aberta, fogo alto e obsessao por detalhe.</h2>
-          <p data-site="aboutText">A Mão na Brasa Burger nasceu para transformar o pedido de hamburguer em um ritual simples e muito bem executado: carne moida diariamente, pao de fermentacao longa, molhos autorais e operacao pensada para chegar quente.</p>
-          <div class="stats">
-            <span><b>100%</b> artesanal</span>
-            <span><b data-site="statOrders">12k+</b> pedidos</span>
-            <span><b data-site="statRating">4.9</b> media</span>
-            <span><b data-site="statPrep">35min</b> preparo</span>
-          </div>
-        </div>
-        <img src="assets/kitchen-team.png" alt="Equipe preparando hamburgueres em cozinha profissional">
-      </section>
-
-      <section class="section" id="galeria">
-        <div class="section-head">
-          <p class="eyebrow">Galeria</p>
-          <h2>Textura, brasa e bastidor</h2>
-        </div>
-        <div class="gallery" id="gallery"></div>
-      </section>
-
-      <section class="section reviews" id="avaliacoes">
-        <div class="rating-card">
-          <p class="eyebrow">Quem provou, aprovou</p>
-          <h2 data-site="reviewScore">4.9/5</h2>
-          <p data-site="reviewSummary">Media de 1.827 avaliacoes verificadas.</p>
-        </div>
-        <div class="review-list" id="reviews"></div>
-      </section>
-
-      <section class="section instagram">
-        <div>
-          <p class="eyebrow">Siga a gente</p>
-          <h2 data-site="instagram">@mao_na_brasa_burger</h2>
-          <p>Conteudo diario, bastidores e ofertas relampago.</p>
-        </div>
-        <div class="insta-grid" id="instaGrid"></div>
-      </section>
-
-      <section class="section contact" id="contato">
-        <div>
-          <p class="eyebrow">Localizacao</p>
-          <h2 data-site="address">Endereco configuravel da hamburgueria</h2>
-          <p data-site="contactLine">Segunda a domingo, 18:00 as 23:30. WhatsApp: (64) 99236-0895. Instagram: @mao_na_brasa_burger.</p>
-          <div class="contact-actions">
-            <a class="btn primary" data-link="whatsapp" href="https://wa.me/5564992360895" target="_blank" rel="noreferrer">Chamar no WhatsApp</a>
-            <a class="btn outline" data-link="instagram" href="https://www.instagram.com/mao_na_brasa_burger/" target="_blank" rel="noreferrer">Ver Instagram</a>
-          </div>
-        </div>
-        <div class="map" aria-label="Mapa demonstrativo">MÃO NA BRASA<br><span>Endereco e raio de entrega configuraveis</span></div>
-      </section>
-
-      <section class="admin-shell" id="admin">
-        <div class="admin-login" id="adminLogin">
-          <div>
-            <img class="admin-login-logo" src="assets/mao-na-brasa-logo.png" alt="Logo Mão na Brasa Burger">
-            <p class="eyebrow">Area administrativa</p>
-            <h2>Entrar no admin</h2>
-            <p>Gerencie produtos, categorias, fotos, textos, adicionais e dados de contato em um painel simples.</p>
-          </div>
-          <div class="admin-login-form">
-            <label>Email<input id="adminEmail" type="email" placeholder="admin@email.com"></label>
-            <label>Senha<input id="adminPassword" type="password" placeholder="Digite a senha"></label>
-            <button class="btn primary full" id="adminLoginButton">Entrar</button>
-            <small>Use um usuário cadastrado no Supabase Auth.</small>
-          </div>
-        </div>
-        <div class="admin-workspace" id="adminWorkspace" hidden>
-          <aside class="admin-side">
-            <strong>Admin Mão na Brasa</strong>
-            <button class="admin-tab active" data-admin="site">Site</button>
-            <button class="admin-tab" data-admin="products">Produtos</button>
-            <button class="admin-tab" data-admin="categories">Categorias</button>
-            <button class="admin-tab" data-admin="addons">Adicionais</button>
-            <button class="admin-tab" data-admin="gallery">Galeria</button>
-            <button class="admin-tab" data-admin="promos">Promocoes</button>
-            <button class="admin-tab" data-admin="customers">Clientes</button>
-            <button class="admin-tab" data-admin="reviews">Avaliacoes</button>
-            <button class="admin-tab" data-admin="settings">Configuracoes</button>
-            <button class="admin-exit" id="adminLogout">Sair</button>
-          </aside>
-          <div class="admin-panel">
-            <div class="admin-top">
-              <div>
-                <p class="eyebrow">Painel de controle</p>
-                <h2 id="adminTitle">Editar site</h2>
-                <p id="adminSubtitle">Altere textos, fotos, cardapio e configuracoes.</p>
-              </div>
-              <div class="admin-top-actions">
-                <button class="btn ghost small" onclick="resetAdminData()">Restaurar demo</button>
-                <button class="btn ghost small" onclick="adminLogout()">Sair</button>
-              </div>
-            </div>
-            <div id="adminContent"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="agency" id="foco-duplo">
-        <div>
-          <p class="eyebrow">Foco Duplo</p>
-          <h2>Sua marca pode ser muito mais profissional.</h2>
-          <p>Fotografia, video, social media, sites, cardapios digitais e trafego pago para empresas que querem crescer com presenca forte.</p>
-          <a class="btn primary" href="https://wa.me/5564992360895?text=Quero%20um%20projeto%20assim" target="_blank" rel="noreferrer">Quero um projeto assim</a>
-        </div>
-        <div class="service-grid">
-          <span>Fotografia gastronomica</span><span>Sites premium</span><span>Cardapios digitais</span><span>Social media</span><span>Identidade visual</span><span>Trafego pago</span>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="brand"><img class="brand-logo" src="assets/mao-na-brasa-logo.png" alt="Logo Mão na Brasa Burger"><span><strong data-site="brandShort">Mão na Brasa</strong><small data-site="brandTag">Burger</small></span></div>
-      <nav><a href="#inicio">Inicio</a><a href="#cardapio">Cardapio</a><a href="#promocoes">Promocoes</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
-      <p>WhatsApp (64) 99236-0895. Instagram <a href="https://www.instagram.com/mao_na_brasa_burger/" target="_blank" rel="noreferrer">@mao_na_brasa_burger</a>. Experiencia digital desenvolvida por <a href="#foco-duplo">Foco Duplo</a>.</p>
-    </footer>
-
-    <nav class="bottom-nav" aria-label="Navegacao mobile">
-      <a href="#inicio">Inicio</a><a href="#cardapio">Cardapio</a><a href="#promocoes">Ofertas</a><button id="bottomCart">Carrinho</button><a href="#admin">Admin</a>
-    </nav>
-
-    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
-      <div class="drawer-head"><h2>Carrinho</h2><button class="icon-btn" id="closeCart">Fechar</button></div>
-      <div id="cartItems"></div>
-      <div class="cart-summary" id="cartSummary"></div>
-      <button class="btn primary full" id="checkoutButton">Finalizar pedido</button>
+      <div class="welcome-preview" aria-hidden="true"><div class="preview-head"><div class="preview-icon">✳</div><div><b>Seu dia, de forma simples</b><small>Visão geral · Minha Central</small></div><span>● &nbsp; Online</span></div><div class="preview-title">Tudo começa com um plano.</div><div class="preview-metrics"><div><span>PENDENTES</span><b>04</b></div><div><span>PARA HOJE</span><b>02</b></div><div><span>CONCLUÍDAS</span><b>08</b></div></div><div class="preview-subtitle">Prioridades do dia</div><div class="preview-task"><i></i><div><b>Organizar minha semana</b><small>Casa · Hoje</small></div><span>Alta</span></div><div class="preview-task"><i></i><div><b>Revisar meus compromissos</b><small>Agenda · Amanhã</small></div></div><div class="preview-task"><i></i><div><b>Conferir gastos do mês</b><small>Financeiro · Esta semana</small></div></div><div class="preview-foot">Exemplo ilustrativo do painel</div></div>
+    </div><footer class="welcome-footer">Minha Central · Seu espaço pessoal de organização <span class="legal-links"><a href="privacidade.html">Política de Privacidade</a><a href="termos.html">Termos de Uso</a></span></footer>
+  </section>
+  <div class="app-shell hidden" id="authenticatedApp">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-icon">✳</div><div><strong>minha<span>central</span></strong><small>ORGANIZE SUA VIDA</small></div></div>
+      <div class="nav-label">ESPAÇO PESSOAL</div>
+      <nav class="nav" id="mainNav" aria-label="Navegação principal">
+        <button class="nav-link active" data-view="dashboard"><span class="nav-icon">◫</span> Visão geral</button>
+        <button class="nav-link" data-view="tasks"><span class="nav-icon">☑</span> Minhas tarefas <span class="nav-count" id="navTaskCount">0</span></button>
+        <button class="nav-link" data-view="calendar"><span class="nav-icon">▦</span> Calendário</button>
+        <button class="nav-link" data-view="reminders"><span class="nav-icon">♧</span> Lembretes</button>
+      </nav>
+      <div class="nav-label spaces-label">MINHAS ÁREAS</div>
+      <nav class="nav" id="areasNav" aria-label="Categorias">
+        <button class="nav-link" data-category="Trabalho"><span class="category-dot" style="--dot:#7d8bff"></span> Trabalho</button>
+        <button class="nav-link" data-category="Casa"><span class="category-dot" style="--dot:#ffb66b"></span> Casa</button>
+        <button class="nav-link" data-category="Moto RUVA"><span class="category-dot" style="--dot:#ff6c78"></span> Moto RUVA</button>
+        <button class="nav-link" data-category="Financeiro"><span class="category-dot" style="--dot:#77d7bb"></span> Financeiro</button>
+        <button class="nav-link" data-category="Agenda"><span class="category-dot" style="--dot:#c29dff"></span> Agenda</button>
+      </nav>
+      <div class="sidebar-bottom"><button type="button" class="install-sidebar" data-install>↧ Instalar no dispositivo</button><div class="tip-icon">✦</div><strong>Um dia de cada vez.</strong><p>Tire as ideias da cabeça e coloque tudo aqui.</p><button class="tip-btn" id="sidebarNew">+ Nova tarefa</button></div>
+      <div class="sidebar-footer"><span class="status-dot"></span><span id="storageState">Modo demonstração</span></div><div class="app-legal-links"><a href="privacidade.html" target="_blank" rel="noopener">Privacidade</a><a href="termos.html" target="_blank" rel="noopener">Termos</a></div>
     </aside>
 
-    <div class="modal" id="productModal" aria-hidden="true" role="dialog" aria-modal="true"></div>
-    <div class="modal" id="checkoutModal" aria-hidden="true" role="dialog" aria-modal="true"></div>
-    <div class="lightbox" id="lightbox" aria-hidden="true"><button>Fechar</button><img alt=""></div>
-    <div class="toast" id="toast" role="status"></div>
+    <main class="main">
+      <header class="topbar"><div class="mobile-brand"><button class="icon-btn mobile-menu" id="menuButton" aria-label="Abrir menu">☰</button><strong>minha<span>central</span></strong></div><div class="breadcrumb">ESPAÇO PESSOAL <span>/</span> <b id="breadcrumbText">Visão geral</b></div><div class="top-actions"><span class="today-pill" id="todayLabel"></span><button class="avatar" id="profileButton" title="Conta e sincronização">EU</button></div></header>
+      <div class="page-content">
+        <section class="page" data-page="dashboard">
+          <div class="headline"><div><span class="eyebrow">SEU ESPAÇO DE ORGANIZAÇÃO</span><h1 id="greeting">Bom dia! <span>👋</span></h1><p>O que precisa da sua atenção hoje? Vamos colocar tudo em ordem.</p></div><button class="primary-btn" data-add>+ Adicionar tarefa</button></div>
+          <div class="banner" id="cloudBanner"><div class="banner-icon">☁</div><div><strong>Você está usando a versão de demonstração.</strong><p>Suas tarefas ficam neste navegador. Entre com Google para sincronizar suas tarefas na nuvem.</p></div><button class="banner-btn" id="configureButton">Entrar com Google →</button></div>
+          <div class="stat-grid"><article class="stat-card"><div class="stat-top"><span>Total pendente</span><span class="stat-symbol purple">☷</span></div><strong id="statPending">0</strong><small>Tarefas esperando por você</small></article><article class="stat-card"><div class="stat-top"><span>Para hoje</span><span class="stat-symbol orange">◷</span></div><strong id="statToday">0</strong><small>Precisam de atenção hoje</small></article><article class="stat-card"><div class="stat-top"><span>Concluídas</span><span class="stat-symbol green">✓</span></div><strong id="statDone">0</strong><small>Você está fazendo acontecer</small></article><article class="stat-card"><div class="stat-top"><span>Atrasadas</span><span class="stat-symbol red">!</span></div><strong id="statOverdue">0</strong><small>Priorize essas tarefas</small></article></div>
+          <div class="dashboard-grid"><section class="panel tasks-panel"><div class="panel-header"><div><h2>Suas prioridades</h2><p>O mais importante, sem distrações</p></div><button class="text-link" data-go="tasks">Ver todas →</button></div><div id="priorityList" class="task-list"></div></section><section class="panel upcoming-panel"><div class="panel-header"><div><h2>Próximos dias</h2><p>O que está chegando</p></div><button class="icon-circle" data-go="calendar" title="Abrir calendário">↗</button></div><div id="upcomingList" class="upcoming-list"></div></section></div>
+          <section class="quick-section"><div class="panel-header"><div><h2>Organize por área</h2><p>Cada parte da sua vida em seu lugar</p></div></div><div class="area-grid" id="areaCards"></div></section>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="app.js"></script>
-  </body>
+        <section class="page hidden" data-page="tasks"><div class="headline compact"><div><span class="eyebrow">ORGANIZAÇÃO DO DIA A DIA</span><h1>Minhas tarefas</h1><p>Tudo o que você precisa fazer, em um só lugar.</p></div><button class="primary-btn" data-add>+ Nova tarefa</button></div><section class="panel task-manage"><div class="toolbar"><label class="search-wrap"><span>⌕</span><input type="search" id="taskSearch" placeholder="Buscar uma tarefa..." /></label><select id="taskStatus" aria-label="Filtrar status"><option value="all">Todos os status</option><option value="pending">Pendentes</option><option value="done">Concluídas</option><option value="overdue">Atrasadas</option></select><select id="taskCategory" aria-label="Filtrar categoria"><option value="all">Todas as áreas</option><option>Trabalho</option><option>Casa</option><option>Moto RUVA</option><option>Financeiro</option><option>Agenda</option></select></div><div id="allTaskList" class="task-list expanded"></div></section></section>
+
+        <section class="page hidden" data-page="calendar"><div class="headline compact"><div><span class="eyebrow">SEUS COMPROMISSOS</span><h1>Calendário</h1><p>Visualize prazos, tarefas e eventos em um só lugar.</p></div><button class="primary-btn" data-add>+ Novo compromisso</button></div><div class="calendar-layout"><section class="panel calendar-panel"><div class="calendar-toolbar"><h2 id="calendarTitle">Mês</h2><div class="calendar-actions"><button class="outline-btn" id="calendarToday">Hoje</button><button class="icon-circle" id="calendarPrev" aria-label="Mês anterior">‹</button><button class="icon-circle" id="calendarNext" aria-label="Próximo mês">›</button></div></div><div class="calendar-weekdays"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span></div><div id="calendarGrid" class="calendar-grid"></div></section><section class="panel day-panel"><div class="panel-header"><div><h2 id="selectedDayTitle">Compromissos do dia</h2><p>Atividades na data selecionada</p></div></div><div id="selectedDayList" class="task-list"></div></section></div></section>
+
+        <section class="page hidden" data-page="reminders"><div class="headline compact"><div><span class="eyebrow">NADA FICA PARA TRÁS</span><h1>Lembretes</h1><p>Confira o que está vencendo e as atividades recorrentes.</p></div><button class="primary-btn" data-add>+ Criar lembrete</button></div><section class="panel reminder-panel"><div class="panel-header"><div><h2>Precisam da sua atenção</h2><p>Tarefas atrasadas ou previstas para os próximos 7 dias</p></div></div><div id="reminderList" class="task-list expanded"></div></section><section class="panel notification-settings"><div class="panel-header"><div><h2>🔔 Alertas da Minha Central</h2><p>Configure avisos para suas tarefas com data e horário.</p></div><span class="notification-status" id="notificationStatus">Verificando...</span></div><div class="notification-controls"><label>Antecedência do aviso<select id="notificationLead"><option value="0">No horário</option><option value="15">15 minutos antes</option><option value="60">1 hora antes</option><option value="1440">1 dia antes</option></select></label><div class="notification-buttons"><button class="primary-btn" id="enableNotifications" type="button">Ativar notificações push</button><button class="outline-btn" id="testNotification" type="button">Enviar teste push</button></div></div><p class="notification-help" id="notificationHelp">Ative os avisos para receber lembretes com o app fechado, depois de configurar o serviço de envio no Supabase. No iPhone, instale na Tela de Início.</p></section></section>
+      </div>
+    </main>
+  </div>
+  <div class="overlay hidden" id="overlay"></div>
+  <dialog id="taskDialog" class="modal"><form id="taskForm" method="dialog"><div class="modal-header"><div><span class="eyebrow">MINHA CENTRAL</span><h2 id="modalTitle">Nova tarefa</h2></div><button type="button" class="close-btn" data-close aria-label="Fechar">×</button></div><div class="modal-body"><label>Título da tarefa <span>*</span><input name="title" id="formTitle" maxlength="160" required placeholder="Ex.: Pagar conta de energia" /></label><label>Descrição (opcional)<textarea name="description" id="formDescription" rows="3" maxlength="1500" placeholder="Detalhes que você não quer esquecer"></textarea></label><div class="form-row"><label>Área<select id="formCategory" name="category"><option>Trabalho</option><option>Casa</option><option>Moto RUVA</option><option>Financeiro</option><option>Agenda</option></select></label><label>Prioridade<select id="formPriority" name="priority"><option value="normal">Normal</option><option value="high">Alta</option><option value="low">Baixa</option></select></label></div><div class="form-row"><label>Data e horário<input id="formDue" name="due" type="datetime-local" /></label><label>Repetição<select id="formRepeat" name="recurrence"><option value="none">Não repetir</option><option value="daily">Todos os dias</option><option value="weekly">Toda semana</option><option value="monthly">Todo mês</option></select></label></div><p class="form-hint">Para receber avisos, escolha uma data com horário e ative as notificações em Lembretes.</p></div><div class="modal-footer"><button type="button" class="outline-btn" data-close>Cancelar</button><button type="submit" class="primary-btn" id="saveTaskButton">Salvar tarefa</button></div></form></dialog>
+  <dialog id="settingsDialog" class="modal settings-modal"><div class="modal-header"><div><span class="eyebrow">PREFERÊNCIAS</span><h2>Nuvem e conta</h2></div><button type="button" class="close-btn" data-close aria-label="Fechar">×</button></div><div class="modal-body"><div class="account-box" id="accountStatus">Modo demonstração — dados salvos somente neste navegador.</div><p class="setting-description">Sua nuvem já está configurada neste aplicativo. Entre com sua conta Google para acessar suas tarefas em qualquer celular ou computador. A chave utilizada é pública; nunca compartilhe credenciais secretas.</p><div class="setting-actions"><button class="outline-btn" id="googleSignIn" type="button">Entrar com Google</button><button class="outline-btn hidden" id="googleSignOut" type="button">Sair da conta</button></div><p class="form-hint" id="cloudHelp">O login conecta sua conta e suas tarefas à nuvem. As notificações são independentes do Google Agenda.</p></div></dialog>
+  <dialog id="installDialog" class="modal install-dialog"><div class="modal-header"><div><span class="eyebrow">MINHA CENTRAL</span><h2>Instale no seu dispositivo</h2></div><button type="button" class="close-btn" data-close aria-label="Fechar">×</button></div><div class="modal-body"><p id="installInstructions" class="install-instructions"></p><p class="form-hint">Instalar não ativa notificações automaticamente. Depois de instalar, abra Lembretes para permitir as notificações.</p></div><div class="modal-footer"><button type="button" class="primary-btn" data-close>Entendi</button></div></dialog>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="app.js" defer></script>
+  <script src="push-config.js" defer></script>
+  <script src="notifications.js" defer></script>
+  <script src="install.js" defer></script>
+</body>
 </html>
